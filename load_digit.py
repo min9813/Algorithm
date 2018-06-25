@@ -111,7 +111,6 @@ if __name__ =="__main__":
     digit_text = args.load_file_name.read().replace("\n","")
     args.load_file_name.close()
     index_list = [1,2,3,4]
-    print(digit_text[:10])
     text_length = len(digit_text)
     print("text_length:",text_length)
     result = [main(digit_text,index=index,string_length = text_length) for index in index_list]
