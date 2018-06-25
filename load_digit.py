@@ -40,14 +40,14 @@ def count_digit_type(string,_data_sum = 0, number = None, digit=1, index = 1, is
         print("_data_sum:",_data_sum)
         print(digit_list)
         if is_reverse:
-            flag_next = data_sum <= index
+            flag_next = data_sum <= index and _data_sum != data_sum
             flag_stop1 = 0<= index - digit_sum[d] and index - digit_sum[d] <=1
             if d>0:
                 flag_stop2 = digit_sum[d] - digit_sum[d-1] == -1
             else:
                 flag_stop2 = digit_sum[d] - _data_sum == -1
         else:
-            flag_next = data_sum >= index
+            flag_next = data_sum >= index and _data_sum != data_sum
             flag_stop1 = -1<= index - digit_sum[d] and index - digit_sum[d] <=0
             if d>0:
                 flag_stop2 = digit_sum[d] - digit_sum[d-1] == 1
